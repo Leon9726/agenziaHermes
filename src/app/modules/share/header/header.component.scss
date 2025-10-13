@@ -1,0 +1,42 @@
+/* Colore primario personalizzato (un blu più scuro e sofisticato) */
+.bg-custom-primary {
+  background-color: #2c3e50 !important; /* Un blu notte o grigio scuro */
+}
+
+/* Effetto di "sfocatura vetro" (se applicato all'header, rende lo sfondo leggermente trasparente e sfocato) */
+.backdrop-blur-header {
+  backdrop-filter: blur(8px); /* Più intenso che nel footer per risaltare */
+  background-color: rgba(44, 62, 80, 0.9) !important; /* Rende lo sfondo leggermente trasparente */
+}
+
+/* Stile per il logo rotondo */
+.navbar-logo {
+  border-radius: 50%; /* Rende l'immagine circolare */
+  border: 2px solid rgba(255, 255, 255, 0.7); /* Bordo bianco sottile */
+  padding: 2px; /* Spaziatura interna per il bordo */
+  transition: all 0.3s ease-in-out; /* Animazione per l'hover */
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05); /* Piccolo ingrandimento al passaggio del mouse */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombra luminosa */
+}
+
+/* Stili per i link di navigazione */
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8); /* Testo link leggermente trasparente */
+  font-weight: 500; /* Leggermente più spesso */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffffff; /* Bianco puro al passaggio del mouse o se attivo */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Ombra leggera sul testo */
+}
+
+/* Padding personalizzato per la navbar */
+.navbar-custom-padding {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
