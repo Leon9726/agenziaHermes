@@ -6,7 +6,9 @@ import { ShareModule } from '../share/share.module';
 import { HomeComponent } from './home/home.component';
 import { ServiziComponent } from './servizi/servizi.component';
 import { ContattiComponent } from './contatti/contatti.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,17 @@ import { ContattiComponent } from './contatti/contatti.component';
   imports: [
     CommonModule,
     PublicRoutingModule,
-    ShareModule
+    ShareModule,
+    FontAwesomeModule
 ],
   exports: [
     ServiziComponent
   ]
 })
-export class PublicModule { }
+export class PublicModule { 
+ constructor(library: FaIconLibrary) {
+    // Aggiungi l'intero set di icone "solide" (fas)
+    library.addIconPacks(fas);
+  }
+
+}
