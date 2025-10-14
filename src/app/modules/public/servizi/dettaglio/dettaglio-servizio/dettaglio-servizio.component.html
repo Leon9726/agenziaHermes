@@ -1,0 +1,34 @@
+<div class="container my-5 py-3">
+  <div class="row g-5">
+    <div class="col-md-6 mb-4">
+      <img [src]="service.image" [alt]="service.title" class="img-fluid rounded-4 shadow-lg service-detail-img">
+    </div>
+
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <div class="text-start">
+        <h1 class="display-5 fw-bold text-dark mb-3">{{ service.title }}</h1>
+        <p class="lead text-muted">{{ service.shortDescription }}</p>
+        <p class="text-secondary">{{ service.fullDescription }}</p>
+        
+        <div class="mt-4 pt-3 border-top">
+          <ul class="list-unstyled">
+            <li class="d-flex align-items-center mb-2">
+              <i class="fas fa-check-circle text-success me-2"></i> Processo rapido
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <i class="fas fa-check-circle text-success me-2"></i> Assistenza dedicata
+            </li>
+            <li class="d-flex align-items-center mb-2">
+              <i class="fas fa-check-circle text-success me-2"></i> Preventivo gratuito
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-4 d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="/contatti" class="btn btn-primary btn-lg px-4 me-md-2">Richiedi un preventivo</a>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Scopri i documenti necessari</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

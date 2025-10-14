@@ -1,3 +1,4 @@
+import { services } from './../../../data/services-data';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,35 +10,9 @@ import { Router } from '@angular/router';
 export class ServiziComponent {
   constructor(private router: Router) {}
 
-
-  services = [
-    {
-      title: 'Rinnovo patente',
-      image: 'assets/images/servizi/rinnovoPatente.jpeg',
-      description: 'Navigando nell’intricato tessuto della vita, le scelte svelano percorsi verso l’eccezionale...',
-      link: '/servizi/rinnovo-patente'
-    },
-    {
-      title: 'Immatricolazione veicoli esteri',
-      image: 'assets/images/servizi/immatricolazione.jpeg',
-      description: 'Richiedendo creatività, curiosità e coraggio per un viaggio veramente appagante.',
-      link: '/servizi/immatricolazione-veicoli'
-    },
-    {
-      title: 'Pagamento bollo auto',
-      image: 'assets/images/servizi/pagamentoBollo.jpeg',
-      description: 'Navigando nell’intricato tessuto della vita, le scelte svelano percorsi verso l’eccezionale...',
-      link: '/servizi/bollo-auto'
-    },
-    {
-      title: 'Passaggio di proprietà',
-      image: 'assets/images/servizi/passaggioProprieta.jpeg',
-      description: 'Richiedendo creatività, curiosità e coraggio per un viaggio veramente appagante.',
-      link: '/servizi/passaggio-proprieta'
-    }
-  ];
+  public services = services
 
   navigateTo(path: string) {
-    this.router.navigate([path]);
+    this.router.navigateByUrl('servizi/'+ [path]);
   }
 }
