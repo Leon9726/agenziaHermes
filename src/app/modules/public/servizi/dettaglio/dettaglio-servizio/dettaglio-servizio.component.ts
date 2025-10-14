@@ -19,7 +19,7 @@ export class DettaglioServizioComponent implements OnInit {
       const servicePath = params.get('path');
       
       // Cerca il servizio nell'array che corrisponde al path
-      this.service = services.find(s => s.path === servicePath);
+      this.service = services.find(s => s.path === 'servizi/'+servicePath);
       
       // Se il servizio non viene trovato, puoi reindirizzare l'utente alla pagina 404
       if (!this.service) {

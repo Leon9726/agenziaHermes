@@ -1,10 +1,39 @@
-.card {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.section-title {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-.card:hover {
-  transform: translateY(-5px); /* Sposta la scheda leggermente in alto */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra più grande */
+.service-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon-container {
+  height: 150px;
+  background-color: #ecf0f1;
+  border-bottom: 1px solid #ddd;
+}
+
+.service-btn {
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.service-btn:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.text-primary {
+  color: #3498db !important;
 }

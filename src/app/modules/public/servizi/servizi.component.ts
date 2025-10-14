@@ -13,6 +13,6 @@ export class ServiziComponent {
   public services = services
 
   navigateTo(path: string) {
-    this.router.navigateByUrl('servizi/'+ [path]);
+    this.router.navigate([path]);
   }
 }
