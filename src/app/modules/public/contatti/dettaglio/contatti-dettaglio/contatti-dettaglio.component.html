@@ -1,0 +1,112 @@
+<div class="container-fluid py-5 contact-background">
+    <div class="row justify-content-center">
+        <div class="col-md-8 p-5">
+            <div class="contact-form-container">
+                <h2 class="fw-bold mb-4 text-center">Hai bisogno di informazioni o di un preventivo? Parla con un Agente
+                </h2>
+                <p class="mb-4 text-center">Compila il form e sarai contattato nel giorno e nella fascia oraria scelta
+                </p>
+
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label visually-hidden">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome*" required
+                                formControlName="nome">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cognome" class="form-label visually-hidden">Cognome</label>
+                            <input type="text" class="form-control" id="cognome" placeholder="Cognome*" required
+                                formControlName="cognome">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label visually-hidden">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email*" required
+                                formControlName="email">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label visually-hidden">Telefono/Cellulare</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Telefono/Cellulare*"
+                                required formControlName="telefono">
+                        </div>
+                        <div class="col-12">
+                            <label for="argomento" class="form-label visually-hidden">Seleziona l'argomento</label>
+                            <select class="form-select" id="argomento" required formControlName="argomento">
+                                <option selected disabled>Seleziona l'argomento*</option>
+                                <option *ngFor="let argomento of argomenti" [value]="argomento">{{ argomento }}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="giorno" class="form-label visually-hidden">Giorno di ricontatto</label>
+                            <input type="date" class="form-control" id="giorno" required formControlName="giorno">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="orario" class="form-label visually-hidden">Orario di ricontatto</label>
+                            <select class="form-select" id="orario" required formControlName="orario">
+                                <option selected disabled>Orario di ricontatto*</option>
+                                <option *ngFor="let orario of orari" [value]="orario">{{ orario }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button style="padding: 7px 2rem;" type="submit"
+                            class="col-2 btn btn-primary btn-lg">Contattaci</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 p-5">
+            <div class="row contact-card p-4">
+                <ul class="col-6 list-unstyled">
+                    <li class="d-flex align-items-center mb-3">
+                        <svg style="margin-top: 15px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            fill="currentColor" class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>
+                        <div>
+                            <h3 class="fw-bold">Agenzia Hermes</h3><br>
+                            Viale Stazione, 54<br>
+                            74019 Palagiano (TA)<br>
+                            <a href="https://maps.app.goo.gl/6SA1VAakLMkAsycr9"
+                                style="color: #2c3e50e6 !important; font-weight: bold;" target="_blank"
+                                class="text-primary text-decoration-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-send-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.769a.5.5 0 0 0-.192.326.5.5 0 0 0 .638.585l4.314 1.839 1.838 4.313a.5.5 0 0 0 .585.638.5.5 0 0 0 .326-.192L16.035 1.335a.5.5 0 0 0-.07-.271z" />
+                                </svg>
+                                Indicazioni
+                            </a>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <fa-icon class="me-2" icon="phone"></fa-icon>
+                        <span><a href="tel:+393512135403" class="text-decoration-none text-dark fw-bold">+39
+                                3512135403</a></span>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <fa-icon class="me-2" icon="envelope"></fa-icon>
+                        <span><a href="mailto:hermessrl@pecaruba.it"
+                                class="text-decoration-none text-dark">hermessrl&#64;pecaruba.it</a></span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <fa-icon class="me-2" icon="home"></fa-icon>
+                        <span>Orari di Apertura: Lun-Ven: 09:00-13:00 / 15:00-18:00</span>
+                    </li>
+                </ul>
+                <div class="col-6 p-5">
+                    <div class="ratio ratio-16x9 border shadow rounded">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.260611543408!2d17.038445376231934!3d40.58000254568566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347093b5ed50c17%3A0xfbfcc897f3041ed3!2sAgenzia%20Hermes!5e0!3m2!1sit!2sit!4v1760357074695!5m2!1sit!2sit"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

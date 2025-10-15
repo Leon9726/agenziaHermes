@@ -1,0 +1,75 @@
+/* Stili per il contenitore del form di contatto */
+.contact-form-container {
+  background-color: #e6eaf3;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili per le intestazioni e il testo */
+.contact-form-container h2 {
+  font-size: 2.2rem;
+  color: #001f3f;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.contact-form-container p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Stili per i campi di input del form */
+.form-control,
+.form-select {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #333;
+}
+
+/* Stili per il pulsante del form */
+.btn-primary {
+  background-color: #001f3f;
+  border-color: #001f3f;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #003366;
+  border-color: #003366;
+}
+
+/* Stile per la "scheda" dei contatti */
+.contact-card {
+  background-color: #e6eaf3; /* Colore di sfondo grigio-bluastro */
+  border-radius: 12px; /* Angoli arrotondati */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+/* Stili per il titolo all'interno della scheda */
+.contact-card h2 {
+  font-size: 2.2rem;
+  color: #001f3f; /* Colore scuro, come nell'intestazione del form */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Stili per le icone e i testi */
+.contact-card ul {
+  list-style: none; /* Rimuove i pallini di default */
+  padding-left: 0;
+}
+
+.contact-card li {
+  color: #001f3f; /* Colore scuro per il testo della lista */
+}
+
+.contact-card li svg {
+  color: #001f3f; /* Colore delle icone scuro per coerenza */
+}

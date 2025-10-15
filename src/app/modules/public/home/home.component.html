@@ -4,7 +4,6 @@
       <div class="col-lg-6 hero-text-container py-5">
         <div class="hero-text-content px-5">
           <div class="flex-grow-1">
-            <span class="agency-title">AGENZIA HERMES</span>
             <h1 class="fw-bold mb-3 display-4 text-white">Benvenuto in Agenzia Hermes</h1>
             <div class="mt-4 hero-bullets">
               <p>Quando ti affidi a noi, vivi con serenità e dormi sonni tranquilli.</p>
@@ -13,7 +12,7 @@
             </div>
             <p class="mt-4 fst-italic">E se con le parole sono tutti bravi, non credere sulla fiducia, mettici alla prova.</p>
           </div>
-          <button class="btn btn-primary mt-4">Contattaci</button>
+          <button class="btn btn-primary mt-4" (click)="goToContatti()">Contattaci</button>
         </div>
       </div>
     </div>
@@ -27,3 +26,9 @@
 <section id="contatti" class="py-5 bg-light">
   <app-contatti></app-contatti>
 </section>
+
+<div class="fixed-contact-button">
+  <button class="btn btn-primary rounded-pill px-4 shadow-lg" (click)="goToContatti()">  
+    Contattaci <fa-icon style="padding-left: 7px" icon="pen-to-square"></fa-icon> 
+  </button>
+</div>

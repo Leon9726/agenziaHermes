@@ -1,3 +1,8 @@
+/* Stile per il footer scuro con un po' di trasparenza */
+.bg-custom-dark-footer {
+    background-color: rgba(0, 31, 63, 0.9) !important; /* Colore dell'header con opacità */
+}
+
 .backdrop-blur-bg {
-  backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }

@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
-import { ServiziComponent } from '../servizi/servizi.component';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
+  constructor(public router: Router) { }
+
+
+  ngOnInit(): void {
+
+  }
+
+
+  goToContatti() {
+    this.router.navigate(['/contattiDettaglio']);
+  }
 
 }

@@ -2,7 +2,8 @@
   min-height: 100vh;
   position: relative;
   color: white;
-  background-color: #001f3f; /* Sfondo uniforme per mobile */
+  background-color: #001f3f;
+  /* Sfondo uniforme per mobile */
 }
 
 /* Overlay per migliorare la leggibilità del testo su mobile */
@@ -14,21 +15,24 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1; /* Assicura che l'overlay sia sopra l'immagine */
+  z-index: 1;
+  /* Assicura che l'overlay sia sopra l'immagine */
 }
 
 .hero-text-container {
   /* Assicuriamo che il testo sia sempre ben posizionato */
   padding-left: 1rem;
   padding-right: 1rem;
-  z-index: 2; /* Assicura che il testo sia sopra l'overlay */
+  z-index: 2;
+  /* Assicura che il testo sia sopra l'overlay */
   position: relative;
 }
 
 /* Stili specifici per desktop (schermi più grandi di 992px) */
 @media (min-width: 992px) {
   .hero-section {
-    background: #001f3f; /* Colore solido per la colonna sinistra su desktop */
+    background: #001f3f;
+    /* Colore solido per la colonna sinistra su desktop */
   }
 
   /* La pseudoclasse ::after crea la parte con l'immagine a destra */
@@ -57,4 +61,22 @@
 .btn-primary {
   background-color: #3498db;
   border-color: #3498db;
+}
+
+
+.fixed-contact-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  /* Assicura che il pulsante sia sopra gli altri elementi */
+}
+
+/* Stili specifici per il pulsante, se necessario */
+.fixed-contact-button .btn {
+  background-color: white;
+  border-color: #00205c;
+  color: #00205c;
+  font-weight: bold;
+  font-size: 19px;
 }
