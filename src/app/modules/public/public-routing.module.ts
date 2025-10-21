@@ -7,7 +7,6 @@ import { ContattiComponent } from './contatti/contatti.component';
 import { ContattiDettaglioComponent } from './contatti/dettaglio/contatti-dettaglio/contatti-dettaglio.component';
 
 const routes: Routes = [
-
   {
     path: '', redirectTo: 'home', pathMatch: 'full'
   },
@@ -16,8 +15,10 @@ const routes: Routes = [
     component: HomeComponent,
     data: { title: 'Home Page', breadcrumb: 'Home Page', context: 'public' },
   },
+  // Sposta la rotta fissa 'servizi' sopra quella parametrizzata
+  { path: 'servizi', component: ServiziComponent }, 
   { path: 'servizi/:path', component: DettaglioServizioComponent },
-  { path: 'servizi', component: ServiziComponent },
+  
   { path: 'contatti', component: ContattiComponent },
   { path: 'contattiDettaglio', component: ContattiDettaglioComponent },
 ];

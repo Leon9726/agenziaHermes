@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import emailjs from '@emailjs/browser';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Importa le classi necessarie
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-contatti-dettaglio',
@@ -8,6 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Importa 
   styleUrls: ['./contatti-dettaglio.component.scss']
 })
 export class ContattiDettaglioComponent implements OnInit {
+
+  private router = inject(Router);
+
 
   // Dichiarazione della variabile contactForm come FormGroup
   contactForm!: FormGroup;
@@ -35,6 +40,13 @@ export class ContattiDettaglioComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      window.scrollTo(0, 0);
+    });
+
     // Inizializza il form nel metodo ngOnInit
     this.contactForm = this.fb.group({
       nome: ['', Validators.required],

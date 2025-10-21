@@ -73,3 +73,15 @@
 .contact-card li svg {
   color: #001f3f; /* Colore delle icone scuro per coerenza */
 }
+
+/* Assicura che l'HTML e il BODY occupino l'intera altezza e che il BODY abbia margine zero */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Forse non necessario, ma forza il body a gestire lo scroll se il contenuto lo richiede */
+body {
+  overflow-y: auto; 
+}

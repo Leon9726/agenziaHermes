@@ -1,0 +1,14 @@
+/* Assicurati che il body possa scrollare e occupi l'altezza necessaria */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Rimuovi qualsiasi 'overflow: hidden' o 'overflow: auto' qui! */
+}
+
+/* Se hai un elemento contenitore principale (es. <main-layout>) */
+.main-content-wrapper {
+  /* Assicurati che questo elemento NON gestisca lo scroll al posto della finestra */
+  overflow: visible; /* O assicurati che non abbia overflow auto/scroll */
+  /* NO: height: 100vh; overflow: auto; */
+}

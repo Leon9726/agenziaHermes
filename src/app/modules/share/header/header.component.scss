@@ -11,15 +11,12 @@
 
 /* Stile per il logo rotondo */
 .navbar-logo {
-  border-radius: 50%; /* Rende l'immagine circolare */
-  border: 2px solid rgba(255, 255, 255, 0.7); /* Bordo bianco sottile */
   padding: 2px; /* Spaziatura interna per il bordo */
   transition: all 0.3s ease-in-out; /* Animazione per l'hover */
 }
 
 .navbar-logo:hover {
   transform: scale(1.05); /* Piccolo ingrandimento al passaggio del mouse */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombra luminosa */
 }
 
 /* Stili per i link di navigazione */
@@ -39,4 +36,9 @@
 .navbar-custom-padding {
     padding-top: 0.8rem !important;
     padding-bottom: 0.8rem !important;
+}
+
+.navbar-brand img {
+  width: 120px;
+  height: auto;
 }

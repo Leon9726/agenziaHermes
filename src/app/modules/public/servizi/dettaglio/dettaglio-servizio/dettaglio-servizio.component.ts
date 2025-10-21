@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { services } from '../../../../../data/services-data';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 export class DettaglioServizioComponent implements OnInit {
   service: any;
   
-  constructor(private route: ActivatedRoute) { }
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+
 
   ngOnInit(): void {
     // Leggi il parametro 'path' dall'URL
@@ -26,5 +28,9 @@ export class DettaglioServizioComponent implements OnInit {
         
       }
     });
+  }
+
+   goToContatti() {
+    this.router.navigate(['/contattiDettaglio']);
   }
 }
