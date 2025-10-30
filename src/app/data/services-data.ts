@@ -11,7 +11,7 @@ export const services = [
     image: 'assets/images/servizi/immatricolazione.jpeg',
     path: 'servizi/immatricolazione-veicoli',
     shortDescription: 'Gestiamo l’intera procedura per immatricolare il tuo veicolo dall\'estero.',
-    fullDescription: 'Hai acquistato un veicolo all’estero? Nessun problema. Gestiamo l’intera procedura di immatricolazione, dalla traduzione dei documenti alla registrazione al PRA. Il nostro servizio ti garantisce la conformità con tutte le normative italiane, offrendoti un\'esperienza semplice e trasparente.'
+    fullDescription: 'Hai acquistato un veicolo all’estero? Nessun problema. Gestiamo l’intera procedura di immatricolazione, dalla traduzione dei documenti alla registrazione al PRA. Il nostro servizio ti garantisce la conformità con tutte le normative italiane, offrendoti un\'esperienza semplice, trasparente e veloce.'
   },
   {
     title: 'Pagamento bollo auto',
